@@ -1,9 +1,17 @@
+import HeroSection from '@/components/HeroSection'
+import TrustStrip from '@/components/TrustStrip'
+import CategoryGrid from '@/components/CategoryGrid'
+import FeaturedProducts from '@/components/FeaturedProducts'
+import SellerCTA from '@/components/SellerCTA'
+
 export default function HomePage() {
   return (
-    <main style={{padding:'40px',fontFamily:'Arial, sans-serif'}}>
-      <h1>BEEMUN</h1>
-      <p>Pure for You. Pure for Earth.</p>
-      <p>Zero Plastic • Zero Synthetic • Full Disclosure • BEEMUN Reviewed</p>
+    <main>
+      <HeroSection />
+      <TrustStrip />
+      <CategoryGrid />
+      <FeaturedProducts />
+      <SellerCTA />
     </main>
   )
 }
