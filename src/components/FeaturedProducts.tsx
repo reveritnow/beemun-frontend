@@ -1,7 +1,7 @@
 const products = [
-  { name: 'Cold Pressed Coconut Oil', brand: 'Earth Roots', price: '₹349', note: 'Single-ingredient oil' },
-  { name: 'Rose Face Balm', brand: 'Petal & Soil', price: '₹599', note: 'Glass jar packaging' },
-  { name: 'Hibiscus Hair Powder', brand: 'Root Rituals', price: '₹249', note: 'Full ingredient disclosure' },
+  { name: 'Cold Pressed Coconut Oil', slug: 'cold-pressed-coconut-oil', brand: 'Earth Roots', price: '₹349', note: 'Single-ingredient oil' },
+  { name: 'Rose Face Balm', slug: 'rose-face-balm', brand: 'Petal & Soil', price: '₹599', note: 'Glass jar packaging' },
+  { name: 'Hibiscus Hair Powder', slug: 'hibiscus-hair-powder', brand: 'Root Rituals', price: '₹249', note: 'Full ingredient disclosure' },
 ]
 
 export default function FeaturedProducts() {
@@ -12,14 +12,14 @@ export default function FeaturedProducts() {
         <h2 className="section-title">ZPS 100 products, curated first</h2>
         <div className="product-grid">
           {products.map((product) => (
-            <article key={product.name} className="product-card">
+            <a key={product.name} className="product-card" href={`/product/${product.slug}`}>
               <div className="card-image" />
               <span className="badge">ZPS 100</span>
               <h3>{product.name}</h3>
               <p>by {product.brand}</p>
               <p>{product.note}</p>
               <strong>{product.price}</strong>
-            </article>
+            </a>
           ))}
         </div>
       </div>
