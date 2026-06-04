@@ -1,0 +1,221 @@
+/* Product page polish layer. Keeps the existing routes/components intact while fixing alignment, spacing and visual hierarchy. */
+.product-page {
+  padding-bottom: 28px;
+}
+
+.product-layout {
+  align-items: start;
+}
+
+.product-gallery,
+.product-panel {
+  top: 92px;
+}
+
+.product-main-image {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.product-main-image::before {
+  content: '';
+  position: absolute;
+  inset: 28px;
+  border-radius: 34px;
+  background: radial-gradient(circle at 50% 12%, rgba(255,250,240,.95), rgba(255,250,240,0) 42%);
+  z-index: -1;
+}
+
+.product-scene {
+  position: relative;
+  width: min(430px, 88%);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-sun {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: rgba(255,250,240,.58);
+  top: 26px;
+  right: 22px;
+  box-shadow: 0 24px 80px rgba(49,69,43,.12);
+}
+
+.product-bottle {
+  position: relative;
+  width: 210px;
+  min-height: 390px;
+  border-radius: 56px 56px 38px 38px;
+  background: linear-gradient(180deg, rgba(255,250,240,.98), #f4ead0 58%, #ead7aa);
+  border: 1px solid rgba(49,69,43,.16);
+  box-shadow: 0 40px 90px rgba(49,69,43,.2), inset 18px 0 30px rgba(255,255,255,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  z-index: 2;
+}
+
+.product-bottle-cap {
+  position: absolute;
+  top: -54px;
+  width: 86px;
+  height: 70px;
+  border-radius: 24px 24px 12px 12px;
+  background: linear-gradient(180deg, #31452b, #1f2a1f);
+  box-shadow: 0 18px 40px rgba(49,69,43,.2);
+}
+
+.product-bottle-neck {
+  position: absolute;
+  top: -8px;
+  width: 102px;
+  height: 54px;
+  border-radius: 16px 16px 8px 8px;
+  background: rgba(255,250,240,.86);
+  border: 1px solid rgba(49,69,43,.12);
+}
+
+.product-bottle-label {
+  width: 100%;
+  min-height: 190px;
+  border-radius: 28px;
+  background: #fffaf0;
+  border: 1px solid #e2d5bb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.product-bottle-label span {
+  color: #6f7f58;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .26em;
+  margin-bottom: 16px;
+}
+
+.product-bottle-label strong {
+  color: #1f2a1f;
+  font-size: 27px;
+  line-height: 1.02;
+  letter-spacing: -.04em;
+  margin-bottom: 16px;
+}
+
+.product-bottle-label small {
+  color: #5f6b55;
+  font-weight: 800;
+}
+
+.product-coconut {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, #fffaf0 0 22%, #b98a48 23% 44%, #6a4524 45% 100%);
+  box-shadow: 0 28px 50px rgba(49,69,43,.2);
+  z-index: 1;
+}
+
+.product-coconut-one {
+  width: 148px;
+  height: 148px;
+  left: 10px;
+  bottom: 54px;
+}
+
+.product-coconut-two {
+  width: 110px;
+  height: 110px;
+  right: 24px;
+  bottom: 36px;
+  opacity: .9;
+}
+
+.product-panel {
+  background: linear-gradient(180deg, #fffdf6, #fffaf0);
+}
+
+.product-panel > p:not(.section-eyebrow):not(.stock-note) {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.product-panel .badge {
+  margin-right: 8px;
+}
+
+.product-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0 12px;
+}
+
+.product-actions a {
+  text-align: center;
+}
+
+.product-maker-link {
+  display: inline-flex;
+  color: #31452b;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.product-mini-table {
+  background: #f8f2e7 !important;
+  border-radius: 22px;
+}
+
+.product-mini-table .dashboard-row {
+  grid-template-columns: .8fr 1.2fr !important;
+  gap: 10px;
+}
+
+.product-info-section h2 {
+  font-size: clamp(25px, 3vw, 38px);
+  letter-spacing: -.035em;
+  margin-bottom: 14px;
+}
+
+.product-info-section .section-eyebrow + h2 {
+  margin-top: 0;
+}
+
+.product-detail-grid > * {
+  min-width: 0;
+}
+
+.product-info-section .dashboard-table .dashboard-row {
+  grid-template-columns: .9fr 1.4fr;
+}
+
+.quantity-row button:nth-child(2),
+.variant-row button:nth-child(2) {
+  background: #31452b;
+  color: #fffaf0;
+  border-color: #31452b;
+}
+
+@media (max-width: 900px) {
+  .product-scene { min-height: 360px; width: min(320px, 92%); }
+  .product-main-image { min-height: 430px; }
+  .product-bottle { width: 165px; min-height: 305px; border-radius: 42px 42px 30px 30px; }
+  .product-bottle-cap { top: -42px; width: 68px; height: 54px; }
+  .product-bottle-label { min-height: 150px; padding: 18px 14px; }
+  .product-bottle-label strong { font-size: 21px; }
+  .product-coconut-one { width: 108px; height: 108px; left: 0; bottom: 44px; }
+  .product-coconut-two { width: 82px; height: 82px; right: 8px; bottom: 32px; }
+  .product-actions { grid-template-columns: 1fr; }
+  .product-info-section .dashboard-table .dashboard-row,
+  .product-mini-table .dashboard-row { grid-template-columns: 1fr !important; }
+}
