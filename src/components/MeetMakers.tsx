@@ -1,7 +1,7 @@
 const makers = [
-  { name: 'Earth Roots', location: 'Kerala', text: 'Single-ingredient oils and simple natural care rituals.' },
-  { name: 'Petal & Soil', location: 'Jaipur', text: 'Small batch balms, butters, and botanical blends.' },
-  { name: 'Root Rituals', location: 'Himachal', text: 'Herbal powders and plant-led daily care essentials.' },
+  { name: 'Earth Roots', slug: 'earth-roots', location: 'Kerala', text: 'Single-ingredient oils and simple natural care rituals.' },
+  { name: 'Petal & Soil', slug: 'petal-and-soil', location: 'Jaipur', text: 'Small batch balms, butters, and botanical blends.' },
+  { name: 'Root Rituals', slug: 'root-rituals', location: 'Himachal', text: 'Herbal powders and plant-led daily care essentials.' },
 ]
 
 export default function MeetMakers() {
@@ -18,7 +18,7 @@ export default function MeetMakers() {
               <h3>{maker.name}</h3>
               <p className="muted">{maker.location}</p>
               <p>{maker.text}</p>
-              <a href="#brands">View brand</a>
+              <a href={`/brand/${maker.slug}`}>View brand</a>
             </article>
           ))}
         </div>
