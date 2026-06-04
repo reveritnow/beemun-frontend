@@ -3,12 +3,12 @@ export default function SiteHeader() {
     <header className="site-header">
       <a className="site-logo" href="/">BEEMUN</a>
       <nav className="site-nav">
-        <a href="#categories">Shop</a>
-        <a href="#categories">Categories</a>
-        <a href="#zps">ZPS 100</a>
-        <a href="#makers">Partner</a>
+        <a href="/category/skincare">Shop</a>
+        <a href="/category/skincare">Categories</a>
+        <a href="/#zps">ZPS 100</a>
+        <a href="/seller/dashboard">Partner</a>
       </nav>
-      <a className="header-cart" href="#cart">Cart</a>
+      <a className="header-cart" href="/cart">Cart</a>
     </header>
   )
 }
