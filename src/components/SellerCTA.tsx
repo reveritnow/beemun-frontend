@@ -7,7 +7,7 @@ export default function SellerCTA() {
         <p>
           Join BEEMUN and bring genuinely transparent, zero-plastic, zero-synthetic products to customers who care about what they buy.
         </p>
-        <a className="btn-primary" href="#partner">Partner With BEEMUN</a>
+        <a className="btn-primary" href="/seller/dashboard">Partner With BEEMUN</a>
       </div>
     </section>
   )
