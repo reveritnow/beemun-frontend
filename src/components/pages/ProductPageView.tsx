@@ -52,13 +52,13 @@ export default function ProductPageView() {
 
             <section className="product-info-section">
               <h2>Quantity</h2>
-              <div className="variant-row"><button>-</button><button>1</button><button>+</button></div>
+              <div className="variant-row quantity-row"><button>-</button><button>1</button><button>+</button></div>
             </section>
 
-            <div className="hero-actions"><a className="btn-primary" href="/cart">Add to Cart</a><a className="btn-secondary" href="/checkout">Buy Now</a></div>
-            <a className="btn-secondary" href="/brand/earth-roots">View Maker</a>
+            <div className="product-actions"><a className="btn-primary" href="/cart">Add to Cart</a><a className="btn-secondary" href="/checkout">Buy Now</a></div>
+            <a className="product-maker-link" href="/brand/earth-roots">View Maker</a>
 
-            <div className="dashboard-table">
+            <div className="dashboard-table product-mini-table">
               <div className="dashboard-row"><strong>Delivery</strong><span>Ships after maker confirmation</span></div>
               <div className="dashboard-row"><strong>Tracking</strong><span>Available inside your BEEMUN account</span></div>
               <div className="dashboard-row"><strong>Support</strong><span>Order help connected to your order page</span></div>
