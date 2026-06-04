@@ -5,10 +5,12 @@ export default function ProductGallery() {
     <div className="product-gallery">
       <div className="product-main-image">
         <div className="product-scene">
+          <div className="product-sun" />
           <div className="product-coconut product-coconut-one" />
           <div className="product-coconut product-coconut-two" />
           <div className="product-bottle">
             <div className="product-bottle-cap" />
+            <div className="product-bottle-neck" />
             <div className="product-bottle-label">
               <span>BEEMUN</span>
               <strong>Cold Pressed<br />Coconut Oil</strong>
