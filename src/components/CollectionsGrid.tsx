@@ -1,8 +1,8 @@
 const collections = [
-  'Founder Favorites',
-  'New Arrivals',
-  'Seasonal Picks',
-  'Gift Collection',
+  { name: 'Founder Favorites', slug: 'skincare' },
+  { name: 'New Arrivals', slug: 'hair-care' },
+  { name: 'Seasonal Picks', slug: 'oils-and-butters' },
+  { name: 'Gift Collection', slug: 'herbal-powders-and-botanicals' },
 ]
 
 export default function CollectionsGrid() {
@@ -13,11 +13,11 @@ export default function CollectionsGrid() {
         <h2 className="section-title">Curated collections</h2>
         <div className="four-grid">
           {collections.map((item) => (
-            <article className="collection-card" key={item}>
+            <a className="collection-card" href={`/category/${item.slug}`} key={item.name}>
               <div className="card-image" />
-              <h3>{item}</h3>
+              <h3>{item.name}</h3>
               <p>Hand-picked products selected around a specific theme.</p>
-            </article>
+            </a>
           ))}
         </div>
       </div>
